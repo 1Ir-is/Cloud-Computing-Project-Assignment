@@ -44,7 +44,7 @@ async function display_products(shop_id,session){
         .heading {
             font-weight: bold;
             text-align: center;
-            font-size: 20px;
+            font-size: 40px;
             margin-bottom: 20px;
             margin-top: 20px;
             color: blue;
@@ -103,14 +103,12 @@ async function display_products(shop_id,session){
             table_string += 
             `<td>
             <button type="submit" name='crud' 
-                class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded" value='update'>Update</button>
+                class="bg-sky-900 hover:bg-sky-500 text-white font-bold py-2 px-4 rounded" value='update'>Update</button>
             <button type="submit" name='crud' 
-                class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                class="bg-violet-900 hover:bg-violet-500 text-white font-bold py-2 px-4 rounded"
                 value='delete'>Delete</button>
         </td>
             </tr></form>`
-
-
         } 
     }
     //since only shop owner can add product, director does not need it
@@ -139,7 +137,7 @@ async function display_products(shop_id,session){
         table_string += 
         `<td> 
         <button type="submit" 
-        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+        class="bg-rose-900 hover:bg-rose-500 text-white font-bold py-2 px-4 rounded"
             name='crud' 
             value='insert'>Insert</button>
         </td>`

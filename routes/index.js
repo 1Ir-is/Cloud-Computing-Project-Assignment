@@ -8,14 +8,14 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/login',function(req,res,next){
-  res.render('login', {title: 'Login',
-                      message: ''})
+  res.render('login', { title: 'Login',
+                        message: ''})
 })
 
 /* POST home page */
 router.post('/',function(req,res,next){
-  res.render('login', {title: 'Login',
-                      message: ''})
+  res.render('login', { title: 'Login',
+                        message: 'Enter your account'})
 })
 
 /* POST login page */
@@ -39,8 +39,8 @@ router.post('/login', async function(req,res,next){
     }
   }
   else{
-    res.render('login', {title: 'Login',
-                      message: 'Incorrect username or password'});
+    res.render('login', { title: 'Login',
+                          message: 'Incorrect username or password'});
   }
 
 })
