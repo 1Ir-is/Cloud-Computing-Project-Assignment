@@ -54,13 +54,25 @@
           <%- table_string %>
         </div>
     </div>
-    <script>
-      window.setInterval(() => {window.location.reload()}, 10000);
 
-      let subMenu = document.getElementById("subMenu");
-      function toggleMenu(){
-            subMenu.classList.toggle("open-menu");
-      }
+    <script>
+        // Admin Page Reload
+
+        //1st Way  
+            // window.setInterval(() => {window.location.reload()}, 10000);
+
+        //2nd Way  
+            window.setInterval('refresh()', 10000); // Call a function every 10000 milliseconds (OR 10 seconds).
+            // Refresh or reload page.
+            function refresh() {
+                window .location.reload();
+            }
+        
+        //Submenu When User Click on Avatar Profile
+            let subMenu = document.getElementById("subMenu");
+            function toggleMenu(){
+                subMenu.classList.toggle("open-menu");
+            }
     </script>
     
 </body>

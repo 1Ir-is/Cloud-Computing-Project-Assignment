@@ -79,8 +79,8 @@ async function display_products(shop_id,session){
     
     table_string += `</tr>`;
     //display all rows of table
-    let  num_rows = data.rowCount;
-    console.log("Num rows: " + num_rows)
+    let num_rows = data.rowCount;
+    // console.log("Num rows: " + num_rows)
     for (let i=0; i<num_rows; i++) {
         table_string += `<form action="/users/crud" method="post">
                         <tr>`;
@@ -96,8 +96,6 @@ async function display_products(shop_id,session){
             }
             
         }
-
-
         //since only shop owners can input new data then the butons should only on their side
         if(session.shop_id!=0){
             table_string += 
@@ -117,7 +115,7 @@ async function display_products(shop_id,session){
         let tempName = temp.fields[0].name;
         last_id = temp.rows[0][tempName];
         console.log(last_id);
-    // Add an empty row and insert button at the end of row
+        // Add an empty row and insert button at the end of row
         table_string += `<tr><form action="/users/crud" method="post">`
         for (let j=0; j<num_fields; j++) {
             let field_name = data.fields[j].name
@@ -142,13 +140,9 @@ async function display_products(shop_id,session){
             value='insert'>Insert</button>
         </td>`
         table_string += '</tr></form>';
-}        
+    }        
     table_string += '</table>'
-    // console.log("DATA: -->")
-    // console.log(data)
-    // console.log(table_string)
-    return table_string;
-    
+    return table_string;   
 }
 
 module.exports = display_products;

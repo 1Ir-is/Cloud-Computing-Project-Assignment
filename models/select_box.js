@@ -18,7 +18,6 @@ async function gen_box(selectValue=-1){
   box_string += `</select>
     <input type="submit" value="view">
   </form>`;
-  // console.log(data);
   return box_string;
 }
 module.exports = gen_box;

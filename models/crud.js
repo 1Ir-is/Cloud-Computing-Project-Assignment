@@ -28,7 +28,6 @@ async function crud(req_body,session){
       values: [id, product_name, price, quantity, shop_id]
     }
   }
-
   results = await pg_conn.query(query);
 
   return results;
