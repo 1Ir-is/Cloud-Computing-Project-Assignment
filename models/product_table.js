@@ -54,7 +54,7 @@ async function display_products(shop_id,session){
             margin-right: 50px;
         }
 
-        </style>
+    </style>
         </head>
         <body>
         <h2 class="heading">Table products</h2>
